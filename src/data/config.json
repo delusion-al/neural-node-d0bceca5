@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "colors": {
+      "primary": "#3b82f6"
+    },
+    "logo_text": "Café Comercial"
+  },
+  "seo": {
+    "title": "Café Comercial",
+    "description": "Test site"
+  },
+  "pages": [
+    {
+      "id": "home",
+      "features": [
+        {
+          "desc": "Test Desc",
+          "title": "Test Feature"
+        }
+      ]
+    }
+  ],
+  "navbar": [],
+  "updated_at": "2026-04-03T17:22:09.911Z"
+}
