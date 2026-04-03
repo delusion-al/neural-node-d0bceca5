@@ -1,17 +1,282 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import config from '../data/config.json';
-const { brand, seo } = config;
 ---
-<Layout title={seo?.title || 'Neural Node'}>
-  <main class="min-h-screen flex flex-col items-center justify-center p-8 text-center">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent)] pointer-events-none"></div>
-    <h1 class="text-6xl font-black italic tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 uppercase">
-       {brand?.name || 'NODE'}
-    </h1>
-    <p class="text-slate-400 text-lg max-w-xl italic">"{seo?.description}"</p>
-    <div class="mt-12 p-6 border border-white/5 rounded-3xl bg-black/40 backdrop-blur-xl">
-       <span class="text-[10px] font-black tracking-widest text-blue-500 uppercase italic">Neural Experience Actived</span>
-    </div>
-  </main>
+<Layout title="QuantumScale | High-Conversion Engine">
+    <main class="container">
+        <!-- HERO SECTION: SUPER-BENTO -->
+        <section class="hero-grid">
+            <div class="card main-value glass-card">
+                <h1 class="reveal-text">Scale Your Revenue <br/><span class="text-gradient">with Spatial Intelligence.</span></h1>
+                <p class="muted">We transform linear websites into multi-dimensional lead generation engines using high-fidelity UI and kinetic motion.</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary">Get Started Now</a>
+                    <a href="#work" class="btn-secondary">View Portfolio</a>
+                </div>
+            </div>
+            <div class="card social-proof glass-card">
+                <span class="label">Trusted By</span>
+                <div class="logo-stack">
+                    <div class="logo-item">◈ Aura</div>
+                    <div class="logo-item">◈ Nexa</div>
+                    <div class="logo-item">◈ Vora</div>
+                </div>
+            </div>
+            <div class="card metric glass-card">
+                <span class="metric-val">142%</span>
+                <span class="label">Avg. Conv. Lift</span>
+            </div>
+            <div class="card quick-action glass-card">
+                <p>Ready for a demo?</p>
+                <button class="btn-small">Book Call</button>
+            </div>
+        </section>
+
+        <!-- FEATURE MATRIX: ASYMMETRIC BENTO -->
+        <section class="feature-matrix">
+            <div class="card feature-demo glass-card">
+                <div class="demo-placeholder">
+                    <div class="floating-element"></div>
+                    <h3>Interactive Engine</h3>
+                </div>
+                <p>Real-time data visualization integrated directly into your user journey.</p>
+            </div>
+            <div class="card feature-benefits glass-card">
+                <h3>Core Pillars</h3>
+                <ul>
+                    <li><span>✦</span> Kinetic Typography</li>
+                    <li><span>✦</span> HSL Luminosity Control</li>
+                    <li><span>✦</span> Glassmorphic Depth</li>
+                    <li><span>✦</span> Z-Axis Parallax</li>
+                </ul>
+            </div>
+            <div class="card trust-bar glass-card">
+                <div class="scrolling-logos">
+                    <span>FORTUNE 500</span>
+                    <span>TECHCRUNCH</span>
+                    <span>WIRED</span>
+                    <span>VERGE</span>
+                </div>
+            </div>
+            <div class="card lead-gen-trigger glass-card gold-ratio">
+                <h3>Secure Your Slot</h3>
+                <p>Our Q4 capacity is nearly full. Apply for a strategy audit.</p>
+                <form class="glass-form">
+                    <input type="email" placeholder="Enter your email" />
+                    <button class="btn-primary">Join Waitlist</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto;
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+
+        .main-value {
+            grid-column: span 8;
+            padding: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main-value h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .social-proof {
+            grid-column: span 4;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .metric {
+            grid-column: span 2;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .quick-action {
+            grid-column: span 2;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .metric-val {
+            display: block;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        .feature-matrix {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto;
+            gap: 24px;
+        }
+
+        .feature-demo {
+            grid-column: span 7;
+            padding: 48px;
+            min-height: 400px;
+        }
+
+        .feature-benefits {
+            grid-column: span 5;
+            padding: 48px;
+        }
+
+        .trust-bar {
+            grid-column: span 5;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .gold-ratio {
+            grid-column: span 7;
+            padding: 48px;
+            background: linear-gradient(135deg, var(--surface), hsla(263, 90%, 65%, 0.1));
+            border: 1px solid var(--primary);
+        }
+
+        .muted {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        .logo-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .logo-item {
+            font-weight: 700;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 32px;
+        }
+
+        li {
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        li span {
+            color: var(--secondary);
+        }
+
+        .scrolling-logos {
+            display: flex;
+            gap: 40px;
+            animation: scroll 20s linear infinite;
+            white-space: nowrap;
+            font-weight: 900;
+            opacity: 0.3;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .glass-form {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .glass-form input {
+            flex: 1;
+            background: rgba(0,0,0,0.2);
+            border: var(--glass-border);
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .demo-placeholder {
+            height: 200px;
+            background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            filter: blur(20px);
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(100px, 50px); }
+        }
+    </style>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Kinetic Typography Reveal
+        gsap.from(".reveal-text", {
+            duration: 1.2,
+            y: 100,
+            opacity: 0,
+            ease: "power4.out",
+            stagger: 0.2
+        });
+
+        // Bento Card Parallax
+        gsap.utils.toArray(".glass-card").forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top bottom",
+                    toggleActions: "play none none reverse"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                delay: i * 0.1,
+                ease: "power3.out"
+            });
+        });
+    </script>
 </Layout>
