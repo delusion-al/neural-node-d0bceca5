@@ -1,282 +1,132 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="QuantumScale | High-Conversion Engine">
-    <main class="container">
-        <!-- HERO SECTION: SUPER-BENTO -->
-        <section class="hero-grid">
-            <div class="card main-value glass-card">
-                <h1 class="reveal-text">Scale Your Revenue <br/><span class="text-gradient">with Spatial Intelligence.</span></h1>
-                <p class="muted">We transform linear websites into multi-dimensional lead generation engines using high-fidelity UI and kinetic motion.</p>
-                <div class="cta-group">
-                    <a href="#contact" class="btn-primary">Get Started Now</a>
-                    <a href="#work" class="btn-secondary">View Portfolio</a>
-                </div>
+<Layout title="Obsidian Optimization Suite">
+    <main class="relative min-h-screen p-4 md:p-8">
+        <!-- Background Ambient Glows -->
+        <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 blur-[120px] pointer-events-none"></div>
+        <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none"></div>
+
+        <!-- HERO SECTION -->
+        <section class="max-w-7xl mx-auto pt-20 pb-32 flex flex-col items-center text-center">
+            <div class="kinetic-text overflow-hidden">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-white tracking-tighter leading-tight">
+                    Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(217,91%,60%)] to-[hsl(263,90%,65%)]">Digital Velocity.</span>
+                </h1>
             </div>
-            <div class="card social-proof glass-card">
-                <span class="label">Trusted By</span>
-                <div class="logo-stack">
-                    <div class="logo-item">◈ Aura</div>
-                    <div class="logo-item">◈ Nexa</div>
-                    <div class="logo-item">◈ Vora</div>
-                </div>
-            </div>
-            <div class="card metric glass-card">
-                <span class="metric-val">142%</span>
-                <span class="label">Avg. Conv. Lift</span>
-            </div>
-            <div class="card quick-action glass-card">
-                <p>Ready for a demo?</p>
-                <button class="btn-small">Book Call</button>
+            <p class="mt-6 text-xl md:text-2xl max-w-2xl opacity-80 font-light">
+                We eliminate friction and optimize architecture for high-ticket brands that demand absolute performance.
+            </p>
+            
+            <div class="mt-12 glass-panel p-2 rounded-2xl flex flex-col md:flex-row gap-2 w-full max-w-lg">
+                <input type="text" placeholder="Enter your URL..." class="bg-transparent border-none outline-none px-6 py-4 text-white flex-grow" />
+                <button class="bg-[hsl(217,91%,60%)] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform active:scale-95">
+                    Analyze Site
+                </button>
             </div>
         </section>
 
-        <!-- FEATURE MATRIX: ASYMMETRIC BENTO -->
-        <section class="feature-matrix">
-            <div class="card feature-demo glass-card">
-                <div class="demo-placeholder">
-                    <div class="floating-element"></div>
-                    <h3>Interactive Engine</h3>
+        <!-- BENTO GRID SECTION -->
+        <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-auto gap-4 mb-32">
+            <!-- Cell A: Main Value Prop (2x2) -->
+            <div class="md:col-span-2 md:row-span-2 glass-panel rounded-3xl p-8 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500">
+                <div>
+                    <span class="text-[hsl(217,91%,60%)] font-mono text-sm uppercase tracking-widest">Core Architecture</span>
+                    <h3 class="text-4xl font-bold text-white mt-4">Full-Stack <br/>Optimization</h3>
                 </div>
-                <p>Real-time data visualization integrated directly into your user journey.</p>
-            </div>
-            <div class="card feature-benefits glass-card">
-                <h3>Core Pillars</h3>
-                <ul>
-                    <li><span>✦</span> Kinetic Typography</li>
-                    <li><span>✦</span> HSL Luminosity Control</li>
-                    <li><span>✦</span> Glassmorphic Depth</li>
-                    <li><span>✦</span> Z-Axis Parallax</li>
-                </ul>
-            </div>
-            <div class="card trust-bar glass-card">
-                <div class="scrolling-logos">
-                    <span>FORTUNE 500</span>
-                    <span>TECHCRUNCH</span>
-                    <span>WIRED</span>
-                    <span>VERGE</span>
+                <div class="mt-8">
+                    <p class="text-lg opacity-70">Our proprietary framework reduces LCP by 40% while increasing conversion density across all device breakpoints.</p>
+                    <div class="mt-6 h-1 w-24 bg-gradient-to-r from-[hsl(217,91%,60%)] to-transparent group-hover:w-full transition-all duration-700"></div>
                 </div>
             </div>
-            <div class="card lead-gen-trigger glass-card gold-ratio">
-                <h3>Secure Your Slot</h3>
-                <p>Our Q4 capacity is nearly full. Apply for a strategy audit.</p>
-                <form class="glass-form">
-                    <input type="email" placeholder="Enter your email" />
-                    <button class="btn-primary">Join Waitlist</button>
-                </form>
+
+            <!-- Cell B: Performance Ticker (1x1) -->
+            <div class="md:col-span-1 glass-panel rounded-3xl p-8 flex flex-col justify-center items-center text-center hover:-translate-y-2 transition-all duration-500">
+                <span class="text-5xl font-black text-white mb-2" id="ticker">0.00</span>
+                <span class="text-xs uppercase tracking-widest opacity-50">Avg. Response Time (s)</span>
+            </div>
+
+            <!-- Cell C: Trust Signal (1x1) -->
+            <div class="md:col-span-1 glass-panel rounded-3xl p-8 flex items-center justify-center overflow-hidden">
+                <div class="flex flex-col gap-4 opacity-40 grayscale hover:grayscale-0 transition-all">
+                    <div class="h-6 w-20 bg-white/20 rounded"></div>
+                    <div class="h-6 w-24 bg-white/20 rounded"></div>
+                    <div class="h-6 w-16 bg-white/20 rounded"></div>
+                </div>
+            </div>
+
+            <!-- Cell D: Before/After (2x1) -->
+            <div class="md:col-span-2 glass-panel rounded-3xl p-8 relative overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-500">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold text-white">Visual Impact</h3>
+                    <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-white">Interactive Slider</span>
+                </div>
+                <div class="mt-6 relative h-32 bg-black/40 rounded-xl overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-500/20 to-green-500/20"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-mono text-xs">
+                        DRAG TO COMPARE
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD PREVIEW (AdminPanel Integration) -->
+        <section class="max-w-6xl mx-auto mb-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">Your Command Center</h2>
+                <p class="opacity-60 mt-4">Real-time telemetry for your digital assets.</p>
+            </div>
+            <div class="glass-panel rounded-[2rem] p-4 md:p-8 relative">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="ml-4 h-6 w-64 bg-white/5 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6">
+                        <div class="h-4 w-24 bg-white/10 rounded mb-4"></div>
+                        <div class="h-32 w-full bg-gradient-to-t from-blue-500/20 to-transparent rounded-lg"></div>
+                    </div>
+                    <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6">
+                        <div class="h-4 w-24 bg-white/10 rounded mb-4"></div>
+                        <div class="space-y-3">
+                            <div class="h-2 w-full bg-white/10 rounded"></div>
+                            <div class="h-2 w-3/4 bg-white/10 rounded"></div>
+                            <div class="h-2 w-5/6 bg-white/10 rounded"></div>
+                        </div>
+                    </div>
+                    <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6">
+                        <div class="h-4 w-24 bg-white/10 rounded mb-4"></div>
+                        <div class="flex items-center justify-center h-40">
+                            <div class="w-20 h-20 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <style>
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 80px 24px;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: auto auto;
-            gap: 24px;
-            margin-bottom: 64px;
-        }
-
-        .main-value {
-            grid-column: span 8;
-            padding: 64px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .main-value h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-
-        .social-proof {
-            grid-column: span 4;
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .metric {
-            grid-column: span 2;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .quick-action {
-            grid-column: span 2;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .metric-val {
-            display: block;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--secondary);
-        }
-
-        .feature-matrix {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: auto auto;
-            gap: 24px;
-        }
-
-        .feature-demo {
-            grid-column: span 7;
-            padding: 48px;
-            min-height: 400px;
-        }
-
-        .feature-benefits {
-            grid-column: span 5;
-            padding: 48px;
-        }
-
-        .trust-bar {
-            grid-column: span 5;
-            padding: 32px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .gold-ratio {
-            grid-column: span 7;
-            padding: 48px;
-            background: linear-gradient(135deg, var(--surface), hsla(263, 90%, 65%, 0.1));
-            border: 1px solid var(--primary);
-        }
-
-        .muted {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            margin-bottom: 32px;
-            max-width: 600px;
-        }
-
-        .logo-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .logo-item {
-            font-weight: 700;
-            font-size: 1.5rem;
-            opacity: 0.7;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 32px;
-        }
-
-        li {
-            margin-bottom: 16px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        li span {
-            color: var(--secondary);
-        }
-
-        .scrolling-logos {
-            display: flex;
-            gap: 40px;
-            animation: scroll 20s linear infinite;
-            white-space: nowrap;
-            font-weight: 900;
-            opacity: 0.3;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .glass-form {
-            display: flex;
-            gap: 12px;
-            margin-top: 24px;
-        }
-
-        .glass-form input {
-            flex: 1;
-            background: rgba(0,0,0,0.2);
-            border: var(--glass-border);
-            padding: 12px;
-            border-radius: 8px;
-            color: white;
-        }
-
-        .demo-placeholder {
-            height: 200px;
-            background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);
-            border-radius: 12px;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .floating-element {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            filter: blur(20px);
-            position: absolute;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(100px, 50px); }
-        }
-    </style>
-
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        // Ticker Animation
+        const ticker = document.getElementById('ticker');
+        let count = 1.24;
+        setInterval(() => {
+            count = (0.45 + Math.random() * 0.2).toFixed(2);
+            ticker.innerText = count;
+        }, 3000);
 
-        // Kinetic Typography Reveal
-        gsap.from(".reveal-text", {
-            duration: 1.2,
-            y: 100,
-            opacity: 0,
-            ease: "power4.out",
-            stagger: 0.2
-        });
-
-        // Bento Card Parallax
-        gsap.utils.toArray(".glass-card").forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top bottom",
-                    toggleActions: "play none none reverse"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                delay: i * 0.1,
-                ease: "power3.out"
-            });
+        // Kinetic Reveal Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const h1 = document.querySelector('h1');
+            h1.style.opacity = '0';
+            h1.style.transform = 'translateY(30px)';
+            h1.style.transition = 'all 1s cubic-bezier(0.22, 1, 0.36, 1)';
+            
+            setTimeout(() => {
+                h1.style.opacity = '1';
+                h1.style.transform = 'translateY(0)';
+            }, 200);
         });
     </script>
 </Layout>
