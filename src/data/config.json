@@ -1,25 +1,30 @@
 {
   "brand": {
     "colors": {
-      "primary": "#3b82f6"
+      "background": "hsl(222, 47%, 4%)",
+      "surface": "hsl(222, 47%, 12% / 0.6)",
+      "primary": "hsl(263, 90%, 65%)",
+      "secondary": "hsl(180, 100%, 50%)",
+      "text_primary": "hsl(0, 0%, 98%)",
+      "text_muted": "hsl(215, 20%, 65%)"
     },
     "logo_text": "Café Comercial"
   },
   "seo": {
-    "title": "Café Comercial",
-    "description": "Test site"
+    "title": "QuantumScale | Premium Lead Generation Engine",
+    "description": "Experience the future of conversion with our Spatial UI, Bento-grid architecture, and Glassmorphic design system."
   },
   "pages": [
     {
       "id": "home",
-      "features": [
-        {
-          "desc": "Test Desc",
-          "title": "Test Feature"
-        }
+      "blocks": [
+        "Super-Bento Hero",
+        "Feature Matrix Grid",
+        "Lead Gen Golden-Ratio Card",
+        "Glassmorphic Footer"
       ]
     }
   ],
   "navbar": [],
-  "updated_at": "2026-04-03T17:22:09.911Z"
+  "updated_at": "2026-04-03T21:47:54.841Z"
 }
