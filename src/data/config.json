@@ -2,10 +2,10 @@
   "brand": {
     "colors": {
       "base": "hsl(222, 47%, 4%)",
+      "text": "hsl(215, 20%, 65%)",
       "accent1": "hsl(217, 91%, 60%)",
       "accent2": "hsl(263, 90%, 65%)",
-      "surface": "hsl(217, 32%, 15% / 0.4)",
-      "text": "hsl(215, 20%, 65%)"
+      "surface": "hsl(217, 32%, 15% / 0.4)"
     },
     "logo_text": "Café Comercial",
     "typography": "Inter, Geist, system-ui"
@@ -26,5 +26,5 @@
     }
   ],
   "navbar": [],
-  "updated_at": "2026-04-03T22:36:21.702Z"
+  "updated_at": "2026-04-03T23:30:59.450Z"
 }
