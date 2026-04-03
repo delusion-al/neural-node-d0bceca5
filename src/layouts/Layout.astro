@@ -2,79 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>{Astro.props.title}</title>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style is:global>
         :root {
-            --bg: hsl(222, 47%, 4%);
-            --surface: hsl(222, 47%, 12% / 0.6);
-            --primary: hsl(263, 90%, 65%);
-            --secondary: hsl(180, 100%, 50%);
-            --text-main: hsl(0, 0%, 98%);
-            --text-muted: hsl(215, 20%, 65%);
-            --glass-border: 1px solid hsla(0, 0%, 100%, 0.1);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --color-base: hsl(222, 47%, 4%);
+            --color-accent-1: hsl(217, 91%, 60%);
+            --color-accent-2: hsl(263, 90%, 65%);
+            --color-surface: hsl(217, 32%, 15% / 0.4);
+            --color-text: hsl(215, 20%, 65%);
+            --color-text-bright: hsl(215, 20%, 95%);
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--color-base);
+            color: var(--color-text);
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 0;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        .glass-card {
-            background: var(--surface);
+        .glass-panel {
+            background: var(--color-surface);
             backdrop-filter: blur(16px) saturate(180%);
-            border: var(--glass-border);
-            box-shadow: var(--glass-shadow);
-            border-radius: 24px;
-            transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), border-color 0.3s ease;
+            border: 1px solid hsl(217, 32%, 15% / 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
         }
 
-        .glass-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
+        .kinetic-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
 
-        .text-gradient {
-            background: linear-gradient(135deg, var(--text-main) 0%, var(--text-muted) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px hsla(263, 90%, 65%, 0.4);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 0 30px hsla(263, 90%, 65%, 0.6);
-            transform: scale(1.05);
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <slot />
-    <script>
-        const lenis = new Lenis();
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-    </script>
 </body>
 </html>
