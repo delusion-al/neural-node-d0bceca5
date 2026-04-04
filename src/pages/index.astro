@@ -1,132 +1,140 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Obsidian Optimization Suite">
-    <main class="relative min-h-screen p-4 md:p-8">
-        <!-- Background Ambient Glows -->
-        <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 blur-[120px] pointer-events-none"></div>
-        <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none"></div>
+<Layout title="Café Comercial | Precision Roasting">
+  <main class="relative min-h-screen p-4 md:p-8 overflow-hidden">
+    <!-- Background Ambient Glows (Adapted from Obsidian logic for Coffee Aesthetic) -->
+    <div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-amber-900/20 blur-[120px] pointer-events-none"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-orange-900/10 blur-[120px] pointer-events-none"></div>
 
-        <!-- HERO SECTION -->
-        <section class="max-w-7xl mx-auto pt-20 pb-32 flex flex-col items-center text-center">
-            <div class="kinetic-text overflow-hidden">
-                <h1 class="text-6xl md:text-8xl font-extrabold text-white tracking-tighter leading-tight">
-                    Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(217,91%,60%)] to-[hsl(263,90%,65%)]">Digital Velocity.</span>
-                </h1>
-            </div>
-            <p class="mt-6 text-xl md:text-2xl max-w-2xl opacity-80 font-light">
-                We eliminate friction and optimize architecture for high-ticket brands that demand absolute performance.
-            </p>
-            
-            <div class="mt-12 glass-panel p-2 rounded-2xl flex flex-col md:flex-row gap-2 w-full max-w-lg">
-                <input type="text" placeholder="Enter your URL..." class="bg-transparent border-none outline-none px-6 py-4 text-white flex-grow" />
-                <button class="bg-[hsl(217,91%,60%)] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform active:scale-95">
-                    Analyze Site
-                </button>
-            </div>
-        </section>
+    <!-- NAVIGATION -->
+    <nav class="max-w-7xl mx-auto flex justify-between items-center py-8 relative z-10">
+      <div class="text-2xl font-black tracking-tighter text-white">
+        CAFÉ<span class="text-[hsl(42,45%,60%)]">COMERCIAL</span>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium opacity-70">
+        <a href="#experience" class="hover:text-[hsl(42,45%,60%)] transition-colors">Experience</a>
+        <a href="#wholesale" class="hover:text-[hsl(42,45%,60%)] transition-colors">Wholesale</a>
+        <a href="#sourcing" class="hover:text-[hsl(42,45%,60%)] transition-colors">Sourcing</a>
+      </div>
+      <button class="glass-panel px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition-all">
+        Contact Us
+      </button>
+    </nav>
 
-        <!-- BENTO GRID SECTION -->
-        <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-auto gap-4 mb-32">
-            <!-- Cell A: Main Value Prop (2x2) -->
-            <div class="md:col-span-2 md:row-span-2 glass-panel rounded-3xl p-8 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500">
-                <div>
-                    <span class="text-[hsl(217,91%,60%)] font-mono text-sm uppercase tracking-widest">Core Architecture</span>
-                    <h3 class="text-4xl font-bold text-white mt-4">Full-Stack <br/>Optimization</h3>
-                </div>
-                <div class="mt-8">
-                    <p class="text-lg opacity-70">Our proprietary framework reduces LCP by 40% while increasing conversion density across all device breakpoints.</p>
-                    <div class="mt-6 h-1 w-24 bg-gradient-to-r from-[hsl(217,91%,60%)] to-transparent group-hover:w-full transition-all duration-700"></div>
-                </div>
-            </div>
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl mx-auto pt-20 pb-32 flex flex-col items-center text-center relative z-10">
+      <div class="kinetic-text overflow-hidden">
+        <h1 class="text-6xl md:text-9xl font-black text-white tracking-tighter leading-tight">
+          Engineering <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(42,45%,60%)] to-[hsl(34,30%,40%)]">
+            Liquid Gold.
+          </span>
+        </h1>
+      </div>
+      <p class="mt-8 text-xl md:text-2xl max-w-3xl opacity-70 font-light leading-relaxed">
+        We merge artisanal precision with commercial scale. Providing high-ticket hospitality brands with the most consistent, high-yield coffee architecture in the industry.
+      </p>
+      <div class="mt-12 flex flex-col md:flex-row gap-4 w-full max-w-lg">
+        <button class="bg-[hsl(42,45%,60%)] text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform active:scale-95 shadow-2xl shadow-amber-900/20">
+          Request Wholesale Kit
+        </button>
+        <button class="glass-panel text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/5 transition-all">
+          Explore Roasts
+        </button>
+      </div>
+    </section>
 
-            <!-- Cell B: Performance Ticker (1x1) -->
-            <div class="md:col-span-1 glass-panel rounded-3xl p-8 flex flex-col justify-center items-center text-center hover:-translate-y-2 transition-all duration-500">
-                <span class="text-5xl font-black text-white mb-2" id="ticker">0.00</span>
-                <span class="text-xs uppercase tracking-widest opacity-50">Avg. Response Time (s)</span>
-            </div>
+    <!-- BENTO GRID SECTION: The Experience -->
+    <section id="experience" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-auto gap-6 mb-32 relative z-10">
+      <!-- Cell A: The Roast (2x2) -->
+      <div class="md:col-span-2 md:row-span-2 glass-panel rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden relative">
+        <div class="relative z-10">
+          <span class="text-[hsl(42,45%,60%)] font-mono text-xs uppercase tracking-widest">Precision Engineering</span>
+          <h3 class="text-5xl font-bold text-white mt-4 leading-tight">The Art of the <br/>Thermal Curve</h3>
+        </div>
+        <div class="mt-8 relative z-10">
+          <p class="text-lg opacity-60 max-w-md">Our proprietary roasting profiles eliminate bitterness and maximize aromatic density through millisecond-accurate heat control.</p>
+          <div class="mt-6 h-1 w-20 bg-[hsl(42,45%,60%)] group-hover:w-full transition-all duration-700"></div>
+        </div>
+        <!-- Decorative Background Shape -->
+        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-[hsl(42,45%,60%)]/10 rounded-full blur-3xl group-hover:bg-[hsl(42,45%,60%)]/20 transition-all"></div>
+      </div>
 
-            <!-- Cell C: Trust Signal (1x1) -->
-            <div class="md:col-span-1 glass-panel rounded-3xl p-8 flex items-center justify-center overflow-hidden">
-                <div class="flex flex-col gap-4 opacity-40 grayscale hover:grayscale-0 transition-all">
-                    <div class="h-6 w-20 bg-white/20 rounded"></div>
-                    <div class="h-6 w-24 bg-white/20 rounded"></div>
-                    <div class="h-6 w-16 bg-white/20 rounded"></div>
-                </div>
-            </div>
+      <!-- Cell B: Sourcing (1x1) -->
+      <div class="md:col-span-1 glass-panel rounded-[2.5rem] p-8 flex flex-col justify-center items-center text-center group hover:-translate-y-2 transition-all duration-500">
+        <div class="w-16 h-16 mb-6 bg-white/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C6A664" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="text-3xl font-bold text-white mb-1">100%</span>
+        <span class="text-xs uppercase tracking-widest opacity-50">Direct Trade Sourced</span>
+      </div>
 
-            <!-- Cell D: Before/After (2x1) -->
-            <div class="md:col-span-2 glass-panel rounded-3xl p-8 relative overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-500">
-                <div class="flex justify-between items-center">
-                    <h3 class="text-2xl font-bold text-white">Visual Impact</h3>
-                    <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-white">Interactive Slider</span>
-                </div>
-                <div class="mt-6 relative h-32 bg-black/40 rounded-xl overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-500/20 to-green-500/20"></div>
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-mono text-xs">
-                        DRAG TO COMPARE
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Cell C: Logistics (1x1) -->
+      <div class="md:col-span-1 glass-panel rounded-[2.5rem] p-8 flex flex-col justify-center items-center text-center group hover:-translate-y-2 transition-all duration-500">
+        <div class="w-16 h-16 mb-6 bg-white/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C6A664" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <span class="text-3xl font-bold text-white mb-1">24h</span>
+        <span class="text-xs uppercase tracking-widest opacity-50">Roast-to-Door Cycle</span>
+      </div>
 
-        <!-- DASHBOARD PREVIEW (AdminPanel Integration) -->
-        <section class="max-w-6xl mx-auto mb-32">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-white">Your Command Center</h2>
-                <p class="opacity-60 mt-4">Real-time telemetry for your digital assets.</p>
-            </div>
-            <div class="glass-panel rounded-[2rem] p-4 md:p-8 relative">
-                <div class="flex items-center gap-2 mb-6">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <div class="ml-4 h-6 w-64 bg-white/5 rounded-full"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6">
-                        <div class="h-4 w-24 bg-white/10 rounded mb-4"></div>
-                        <div class="h-32 w-full bg-gradient-to-t from-blue-500/20 to-transparent rounded-lg"></div>
-                    </div>
-                    <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6">
-                        <div class="h-4 w-24 bg-white/10 rounded mb-4"></div>
-                        <div class="space-y-3">
-                            <div class="h-2 w-full bg-white/10 rounded"></div>
-                            <div class="h-2 w-3/4 bg-white/10 rounded"></div>
-                            <div class="h-2 w-5/6 bg-white/10 rounded"></div>
-                        </div>
-                    </div>
-                    <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6">
-                        <div class="h-4 w-24 bg-white/10 rounded mb-4"></div>
-                        <div class="flex items-center justify-center h-40">
-                            <div class="w-20 h-20 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+      <!-- Cell D: Wholesale (2x1) -->
+      <div class="md:col-span-2 glass-panel rounded-[2.5rem] p-10 relative overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-500 flex items-center justify-between">
+        <div>
+          <h3 class="text-3xl font-bold text-white">Enterprise Solutions</h3>
+          <p class="text-lg opacity-60 mt-2">Custom blending and white-labeling for luxury hotel chains.</p>
+        </div>
+        <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[hsl(42,45%,60%)] group-hover:text-black transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        // Ticker Animation
-        const ticker = document.getElementById('ticker');
-        let count = 1.24;
-        setInterval(() => {
-            count = (0.45 + Math.random() * 0.2).toFixed(2);
-            ticker.innerText = count;
-        }, 3000);
+    <!-- LEAD GENERATION SECTION -->
+    <section id="wholesale" class="max-w-5xl mx-auto mb-32 relative z-10">
+      <div class="glass-panel rounded-[3rem] p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-5xl font-bold text-white leading-tight">Scale Your <br/><span class="text-[hsl(42,45%,60%)]">Coffee Program.</span></h2>
+          <p class="mt-6 text-lg opacity-60 font-light">
+            Join the elite network of cafes and hotels that refuse to compromise on consistency. Apply for a wholesale partnership today.
+          </p>
+          <div class="mt-10 space-y-4">
+            {['Custom Roast Profiles', 'Staff Barista Training', 'Equipment Consultation'].map((item) => (
+              <div class="flex items-center gap-3 text-white/80">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A664" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-sm font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <input type="text" placeholder="Full Name" class="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[hsl(42,45%,60%)] transition-all" />
+          <input type="email" placeholder="Business Email" class="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[hsl(42,45%,60%)] transition-all" />
+          <select class="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[hsl(42,45%,60%)] transition-all appearance-none">
+            <option class="bg-secondary">Estimated Monthly Volume</option>
+            <option class="bg-secondary">10 - 50kg</option>
+            <option class="bg-secondary">50 - 200kg</option>
+            <option class="bg-secondary">200kg+</option>
+          </select>
+          <button class="bg-white text-black py-4 rounded-2xl font-bold text-lg hover:bg-[hsl(42,45%,60%)] transition-colors duration-300">
+            Apply for Partnership
+          </button>
+        </div>
+      </div>
+    </section>
 
-        // Kinetic Reveal Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const h1 = document.querySelector('h1');
-            h1.style.opacity = '0';
-            h1.style.transform = 'translateY(30px)';
-            h1.style.transition = 'all 1s cubic-bezier(0.22, 1, 0.36, 1)';
-            
-            setTimeout(() => {
-                h1.style.opacity = '1';
-                h1.style.transform = 'translateY(0)';
-            }, 200);
-        });
-    </script>
+    <footer class="max-w-7xl mx-auto py-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+      <div class="text-xl font-black text-white">
+        CAFÉ<span class="text-[hsl(42,45%,60%)]">COMERCIAL</span>
+      </div>
+      <p class="text-xs opacity-40 uppercase tracking-widest">
+        © 2024 Café Comercial Roastery. All Rights Reserved.
+      </p>
+      <div class="flex gap-6 opacity-60">
+        <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+      </div>
+    </footer>
+  </main>
 </Layout>
